@@ -27,7 +27,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/nklmilojevic/nix-config
+git clone https://github.com/igorhrcek/nix-config
 ```
 
 ### 2. Install Nix (if not already installed)

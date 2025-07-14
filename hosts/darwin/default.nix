@@ -17,7 +17,7 @@
 
   home-manager = {
     backupFileExtension = "backup";
-    users.nkl = {
+    users.igor = {
       imports = [
         inputs.krewfile.homeManagerModules.krewfile
         inputs.catppuccin.homeModules.catppuccin

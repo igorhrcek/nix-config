@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  user = "nkl";
+  user = "igor";
   xdg_configHome = "/home/${user}/.config";
 in {
   home = {

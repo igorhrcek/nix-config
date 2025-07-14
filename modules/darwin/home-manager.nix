@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  user = "nkl";
+  user = "igor";
 in {
   imports = [
     ./homebrew
@@ -36,7 +36,7 @@ in {
           <array>
             <string>/bin/sh</string>
             <string>-c</string>
-            <string>/bin/ln -sf /Users/nkl/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock $SSH_AUTH_SOCK</string>
+            <string>/bin/ln -sf /Users/igor/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock $SSH_AUTH_SOCK</string>
           </array>
           <key>RunAtLoad</key>
           <true/>
@@ -135,8 +135,8 @@ in {
 
   environment.variables.SHELL = "${pkgs.fish}/bin/fish";
 
-  users.users.nkl = {
-    home = "/Users/nkl";
+  users.users.igor = {
+    home = "/Users/igor";
     shell = pkgs.fish;
   };
 
