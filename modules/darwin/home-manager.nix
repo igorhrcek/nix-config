@@ -61,19 +61,15 @@ in {
       persistent-apps = [
         "/Applications/Brave Browser.app/"
         "/System/Applications/Mail.app/"
-        "/System/Applications/Messages.app/"
         "/Applications/Slack.app/"
         "/Applications/Telegram.app"
         "/Applications/Ghostty.app/"
         "/Applications/Fantastical.app/"
-        "/Applications/Discord.app/"
-        "/Applications/Anybox.app/"
         "/Applications/Things3.app/"
-        "/Applications/NotePlan.app/"
+        "/Applications/Bear.app/"
         "/Applications/Spotify.app/"
         "/Applications/RapidAPI.app/"
         "/Applications/TablePlus.app/"
-        "/Applications/Linear.app/"
       ];
     };
 
@@ -154,8 +150,6 @@ in {
       imports = [
         ../shared/home-manager.nix
         ./programs/ghostty
-        ./programs/hammerspoon
-        ./programs/karabiner
         ./programs/1password-agent
       ];
 

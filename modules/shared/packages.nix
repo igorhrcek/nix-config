@@ -127,4 +127,5 @@ in
 
     trippy
     hadolint
+    httpie
   ]

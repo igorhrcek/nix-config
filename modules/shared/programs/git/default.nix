@@ -1,9 +1,9 @@
 {config, ...}: {
   programs.git = {
     enable = true;
-    userName = "Nikola Milojević";
-    userEmail = "nikola@milojevic.me";
-    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICrYywYsK/kocVOa48LjaOR2X10g7lwsB1PtkyBJX800";
+    userName = "Igor Hrček";
+    userEmail = "igor@hrcek.rs";
+    signing.key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKhG7HwYMOuzmgHg4IgHNR1B2M07W2hMhA9Kod/3O5vh";
 
     extraConfig = {
       pull.rebase = false;
