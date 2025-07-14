@@ -93,7 +93,7 @@ in {
     };
 
     menuExtraClock = {
-      Show24Hour = true;
+      Show24Hour = false;
     };
 
     trackpad = {

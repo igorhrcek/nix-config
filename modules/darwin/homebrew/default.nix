@@ -69,7 +69,9 @@
       "Bear - Markdown Notes" = 1016366447;
       "CARROT Weather" = 993487541;
       "Developer" = 640199958;
+      "DevUtils.app" = 1533756032;
       "Home Assistant" = 1099568401;
+      "iStat Menus" = 6499559693;
       "Keynote" = 409183694;
       "Numbers" = 409203825;
       "Pages" = 409201541;

@@ -120,12 +120,7 @@ tasks:
         cat > {{.SECRETS_FILE}} << EOF
         # Generated secrets - Do not edit manually
 
-        set -gx GITHUB_TOKEN "$({{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/gf7hmnugrwm5rtdbmipz66daum/token')"
-        set -gx OPENAI_API_KEY "$({{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/k5spka7d2l4moyxfe5mlo2v4na/apikey')"
-        set -gx COPILOT_API_KEY "$({{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/gz3mhtpcg3xq5cbhf5wgnnnhe4/credential')"
-        set -gx OPENROUTER_KEY "$({{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/4i54jnese3xijduebelr3ct6yq/credential')"
-        set -gx AWS_ACCESS_KEY_ID "$({{.OP}} read 'op://awxerreoeg3k4w6tsh2kc6rr7i/2kjsroafpbafkfxd5sfzsreqpm/AWS_ACCESS_KEY_ID')"
-        set -gx AWS_SECRET_ACCESS_KEY "$({{.OP}} read 'op://awxerreoeg3k4w6tsh2kc6rr7i/2kjsroafpbafkfxd5sfzsreqpm/AWS_SECRET_ACCESS_KEY')"
+        set -gx GITHUB_TOKEN "$({{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/xzangrgv7vsl5ybsunczgthizi/credential' --account AOLECYMKWVC53BBIB5CMKJTUKE)"
         EOF
       - echo "Secrets generated in {{.SECRETS_FILE}}"
 
@@ -133,7 +128,7 @@ tasks:
     cmds:
       - echo "Generating SSH config..."
       - mkdir -p $(dirname {{.SSH_CONFIG_FILE}})
-      - "{{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/eallxdl2umzqln63sb46m3w32a/notesPlain' > {{.SSH_CONFIG_FILE}}"
+      - "{{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/r2nju2cm7xpbyefvpqwvhbo5xy/notesPlain' --account AOLECYMKWVC53BBIB5CMKJTUKE > {{.SSH_CONFIG_FILE}}"
       - echo "SSH config generated in {{.SSH_CONFIG_FILE}}"
 
   generate-atuin-key:
