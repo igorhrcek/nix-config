@@ -106,6 +106,8 @@ in
 
     ollama
 
+    nextdns
+    xcodegen
     cloudflared
     go-task
     talosctl

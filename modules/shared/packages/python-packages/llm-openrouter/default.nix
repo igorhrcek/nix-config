@@ -1,5 +1,5 @@
 {pkgs}:
-pkgs.python312Packages.buildPythonPackage rec {
+pkgs.python313Packages.buildPythonPackage rec {
   pname = "llm-openrouter";
   version = "0.3";
   format = "pyproject";
@@ -8,8 +8,8 @@ pkgs.python312Packages.buildPythonPackage rec {
     owner = "simonw";
     repo = "llm-openrouter";
     rev = version;
-    sha256 = "sha256-mf+kZz1vyTjkNB3qjJkf6DAFjqESQxIhINLJ7BBAdkk=";
+    sha256 = "0n5rj8yfhh4k87g5qy9kkmpn3274icswvrpy7bfa8sl4gb4n8c52";
   };
 
-  propagatedBuildInputs = with pkgs.python312Packages; [llm];
+  propagatedBuildInputs = with pkgs.python313Packages; [llm];
 }
