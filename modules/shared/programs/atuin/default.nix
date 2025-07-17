@@ -8,7 +8,7 @@
       dialect = "uk";
       inline_height = "40";
       show_help = "false";
-      sync_address = "https://atuin.nikola.wtf";
+      sync_address = "https://atuin.hrcek.rs";
       auto_sync = true;
       sync_frequency = "1m";
       search_mode = "fuzzy";
