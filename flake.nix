@@ -94,7 +94,7 @@
       };
     })
     // {
-      darwinConfigurations.daedalus = darwin.lib.darwinSystem {
+      darwinConfigurations.Netrunner = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         pkgs = import nixpkgs {
           system = "aarch64-darwin";

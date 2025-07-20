@@ -33,6 +33,7 @@
       "gitify"
       "ghostty"
       "iina"
+      "istat-menus"
       "intellij-idea"
       "insta360-link-controller"
       "jordanbaird-ice"
@@ -46,6 +47,7 @@
       "proxyman"
       "rapidapi"
       "raycast"
+      "rectangle-pro"
       "rocket"
       "runjs"
       "slack"
@@ -58,6 +60,7 @@
       "visual-studio-code"
       "vlc"
       "whatsapp"
+      "yubico-yubikey-manager"
       "zed"
       "zoom"
       "wezterm"
@@ -67,19 +70,13 @@
       "1Password for Safari" = 1569813296;
       "Anybox" = 1593408455;
       "Bear - Markdown Notes" = 1016366447;
-      "CARROT Weather" = 993487541;
-      "Developer" = 640199958;
-      "DevUtils.app" = 1533756032;
       "Home Assistant" = 1099568401;
-      "iStat Menus" = 6499559693;
       "Keynote" = 409183694;
       "Numbers" = 409203825;
       "Pages" = 409201541;
-      "Parcel" = 639968404;
       "Pixelmator Pro" = 1289583905;
       "Telegram" = 747648890;
       "Things" = 904280696;
-      "Yubico Authenticator" = 1497506650;
     };
   };
 }

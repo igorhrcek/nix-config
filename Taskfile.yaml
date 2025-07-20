@@ -37,7 +37,7 @@ tasks:
       - |
         if [ "{{.OS}}" = "Darwin" ]; then
           echo "Switching to the new Nix-Darwin configuration..."
-          ./result/sw/bin/darwin-rebuild switch --flake .#{{.HOSTNAME}}
+          sudo ./result/sw/bin/darwin-rebuild switch --flake .#{{.HOSTNAME}}
           task post-switch
           echo "Secrets rewritten."
         else
@@ -84,7 +84,7 @@ tasks:
   status:
     cmds:
       - echo "Showing current Nix-Darwin and Home Manager status..."
-      - darwin-rebuild dry-run
+      - sudo darwin-rebuild --dry-run
     desc: Show the current status
 
   darwin-refresh:
@@ -108,8 +108,8 @@ tasks:
       [
         generate-secrets,
         generate-ssh-config,
-        generate-atuin-key,
-        generate-age-key,
+        # generate-atuin-key,
+        # generate-age-key,
       ]
 
   generate-secrets:

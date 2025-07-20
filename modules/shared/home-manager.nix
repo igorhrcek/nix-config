@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./programs/atuin
+    # ./programs/atuin
     ./programs/bat
     ./programs/btop
     ./programs/direnv
@@ -14,7 +14,7 @@
     ./programs/lazygit
     ./programs/neovim
     ./programs/starship
-    ./programs/tmux
+#    ./programs/tmux
     ./programs/zoxide
   ];
 }
