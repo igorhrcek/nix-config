@@ -46,7 +46,6 @@
       hostname = {
         format = "[$hostname]($style) ";
         ssh_only = true;
-        # style = "#D69B6F";
       };
 
       username = {
