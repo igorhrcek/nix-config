@@ -16,6 +16,7 @@
       fish_add_path "$HOME/.local/bin"
       fish_add_path "$HOME/bin"
       fish_add_path "$HOME/.npm-global/bin"
+      fish_add_path "$HOME/.krew/bin"
 
       set -gx SOPS_AGE_KEY_FILE $HOME/.config/sops/age/keys.txt
       set -gx EDITOR code
@@ -24,6 +25,7 @@
       set -gx HOMEBREW_NO_ANALYTICS 1
       set -gx NPM_CONFIG_PREFIX $HOME/.npm-global
       set -gx SSH_AUTH_SOCK $HOME/.1password/agent.sock
+      set -gx PATH $PATH $HOME/.krew/bin
 
       set -U __done_allow_nongraphical 1
       set -U --append __done_exclude '^htop'
@@ -69,11 +71,14 @@
       kubectl = "kubecolor";
       k = "kubectl";
       kns = "kubectl ns";
-      kctx = "kubectl ctx";
+      kubectx = "kubectl ctx";
+      df-pv = "kubectl df-pv";
+      browse-pvc = "kubectl browse-pvc";
       df = "df -h";
       mkdir = "mkdir -p -v";
       lg = "lazygit";
       grep = "rg";
+      ping = "prettyping --nolegend";
     };
 
     functions = {

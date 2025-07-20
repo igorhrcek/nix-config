@@ -10,6 +10,7 @@ in
     fd
     ffmpeg_7
     fzf
+    prettyping
     gettext
     gh
     git

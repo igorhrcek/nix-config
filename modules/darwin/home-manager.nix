@@ -60,17 +60,27 @@ in {
       wvous-tl-corner = 1;
       wvous-tr-corner = 1;
       persistent-apps = [
-        "/Applications/Brave Browser.app/"
         "/System/Applications/Mail.app/"
-        "/Applications/Slack.app/"
-        "/Applications/Telegram.app"
-        "/Applications/Ghostty.app/"
-        "/Applications/Fantastical.app/"
-        "/Applications/Things3.app/"
         "/Applications/Bear.app/"
+        "/Applications/BoltAI.app/"
+        "/Applications/Things3.app/"
+        "/Applications/Visual Studio Code.app/"
+        "/Applications/Cursor.app/"
+        "/Applications/WezTerm.app/"
+        "/Applications/Medis.app/"
+        "/Applications/Brave Browser.app/"
+        "/Applications/Telegram.app/"
+        "/Applications/WhatsApp.app/"
+        "/Applications/Viber.app/"
+        "/Applications/Notion.app/"
         "/Applications/Spotify.app/"
+        "/Applications/Slack.app/"
         "/Applications/RapidAPI.app/"
         "/Applications/TablePlus.app/"
+        "/Applications/DevUtils.app/"
+        "/Applications/Fantastical.app/"
+        "/System/Applications/Messages.app/"
+        "/Applications/1Password.app/"
       ];
     };
 
