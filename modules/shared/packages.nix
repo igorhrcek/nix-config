@@ -86,6 +86,7 @@ in
       ps.ruff
       ps.pillow
       customPackages.llm-openrouter
+      ps.pipx
     ]))
 
     bun
@@ -106,6 +107,7 @@ in
     nixd
 
     ollama
+    claude-code
 
     nextdns
     xcodegen
