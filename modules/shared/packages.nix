@@ -10,6 +10,7 @@ in
     fd
     ffmpeg_7
     fzf
+    prettyping
     gettext
     gh
     git
@@ -53,7 +54,7 @@ in
     age
     sops
 
-    atuin
+    # atuin
     direnv
 
     fish

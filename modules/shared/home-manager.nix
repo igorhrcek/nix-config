@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./programs/atuin
+    # ./programs/atuin
     ./programs/bat
     ./programs/btop
     ./programs/direnv
