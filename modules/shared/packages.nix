@@ -39,7 +39,6 @@ in
     php83
     php83Packages.composer
 
-    # clickhouse
     postgresql_16
     redis
 
@@ -72,6 +71,7 @@ in
 
     pre-commit
     uv
+    mise
 
     (poetry.withPlugins
       (ps: [

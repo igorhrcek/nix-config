@@ -94,9 +94,9 @@
       };
     })
     // {
-      darwinConfigurations.daedalus = darwin.lib.darwinSystem {
+      darwinConfigurations.Netrunner = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        pkgs = import nixpkgs {
+        pkgs = import nixpkgs{
           system = "aarch64-darwin";
           inherit overlays;
           config.allowUnfree = true;

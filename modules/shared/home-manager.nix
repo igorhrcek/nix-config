@@ -14,7 +14,6 @@
     ./programs/lazygit
     ./programs/neovim
     ./programs/starship
-    ./programs/tmux
     ./programs/zoxide
   ];
 }
