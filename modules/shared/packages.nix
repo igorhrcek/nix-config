@@ -126,6 +126,7 @@ in
     kubecm
 
     timg
+    mas
 
     rustup
     lsd

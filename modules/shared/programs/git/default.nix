@@ -14,6 +14,7 @@
       gpg.format = "ssh";
       gpg.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
       diff."ansible-vault".textconv = "ansible-vault view";
+      push.autoSetupRemote = "true";
     };
   };
 }
