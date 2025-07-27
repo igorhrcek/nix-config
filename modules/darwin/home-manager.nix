@@ -66,7 +66,7 @@ in {
         "/Applications/Things3.app/"
         "/Applications/Visual Studio Code.app/"
         "/Applications/Cursor.app/"
-        "/Applications/WezTerm.app/"
+        "/Applications/Ghostty.app/"
         "/Applications/Medis.app/"
         "/Applications/Brave Browser.app/"
         "/Applications/Telegram.app/"
