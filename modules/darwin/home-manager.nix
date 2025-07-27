@@ -54,7 +54,7 @@ in {
       show-recents = false;
       static-only = false;
       showhidden = false;
-      tilesize = 48;
+      tilesize = 56;
       wvous-bl-corner = 1;
       wvous-br-corner = 1;
       wvous-tl-corner = 1;
@@ -126,11 +126,6 @@ in {
       skip-verify-remote = true;
     };
   };
-
-  # system.activationScripts.postUserActivation.text = ''
-  #   /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-  #   killall Dock
-  # '';
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
