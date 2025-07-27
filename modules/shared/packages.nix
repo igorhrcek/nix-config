@@ -54,7 +54,7 @@ in
     age
     sops
 
-    # atuin
+    atuin
     direnv
 
     fish
