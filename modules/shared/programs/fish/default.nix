@@ -99,6 +99,53 @@
           rm -f -- "$tmp"
         '';
       };
+
+      fzf_history = {
+        body = ''
+          set -l line (commandline)
+
+          # tac reverses order initially, tiebreak sorts(?), -n2..,.. ignores first two fields, +m means no "--multi"
+          set -l result (atuin search --cmd-only | fzf --tac "-n2..,.." --tiebreak=index "+m" --query="$line")
+
+          set -l key $result[1]
+          set -l selected $result[2]
+
+          if test "$key" = enter
+              commandline --replace $selected
+              commandline -f repaint
+              commandline -f execute
+              return
+          end
+
+          if test -n "$selected"
+              commandline -r -- $selected
+          end
+
+          commandline -f repaint
+        '';
+      };
+
+      _atuin_fzf_search = {
+        body = ''
+          set -f commands_selected (
+            atuin search --cmd-only --limit 10000 |
+              _fzf_wrapper --print0 \
+                --query=(commandline) \
+          )
+
+          if test $status -eq 0
+              commandline --replace -- $commands_selected
+          end
+
+          commandline --function repaint
+        '';
+      };
+
+      fish_user_key_bindings = {
+        body = ''
+          bind \cR _atuin_fzf_search
+        '';
+      };
     };
   };
 }

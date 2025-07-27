@@ -3,6 +3,7 @@
     enable = true;
     flags = [
       "--disable-up-arrow"
+      "--disable-ctrl-r"
     ];
     settings = {
       dialect = "uk";
