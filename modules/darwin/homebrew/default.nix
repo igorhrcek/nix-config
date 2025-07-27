@@ -5,7 +5,9 @@
     onActivation.upgrade = true;
 
     taps = builtins.attrNames config.nix-homebrew.taps;
-    brews = [];
+    brews = [
+      "atuin"
+    ];
 
     casks = [
       "1password"
