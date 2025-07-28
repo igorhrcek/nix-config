@@ -7,16 +7,16 @@
 }:
 buildGoModule rec {
   pname = "k9s";
-  version = "0.50.6";
+  version = "0.50.9";
 
   src = fetchFromGitHub {
     owner = "derailed";
     repo = "k9s";
     rev = "v${version}";
-    sha256 = "sha256-cL7OD9OtkVx325KcANU8FudcOk6HMct6ve2p0qSkEoc=";
+    sha256 = "sha256-wTQOBxJgrDPcWSiezCwHNgvfGa6oWBM+DNa7RC/9PJA=";
   };
 
-  vendorHash = "sha256-EgYeQenlSaA08uS4Un7+wukAvKfoi9u0BxLGwpBM1sc=";
+  vendorHash = "sha256-e8qXvdpsiBh3SF4v2I56dN/PoPj/b/kWtW6KAd5Sldg=";
 
   doCheck = false;
 
