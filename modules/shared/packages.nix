@@ -53,6 +53,8 @@ in
 
     age
     sops
+    yamllint
+    terraform
 
     direnv
 
