@@ -125,12 +125,19 @@
         '';
       };
 
+
       _atuin_fzf_search = {
         body = ''
           set -f commands_selected (
-            atuin search --cmd-only --limit 10000 |
+            atuin history list --format "{command}" |
+              tail -30000 |
+              tail -r |
               _fzf_wrapper --print0 \
+                --no-sort \
                 --query=(commandline) \
+                --height=40% \
+                --border \
+                --preview-window=hidden
           )
 
           if test $status -eq 0
