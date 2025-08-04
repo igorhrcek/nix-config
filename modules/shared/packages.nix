@@ -128,6 +128,7 @@ in
 
     timg
     mas
+    stats
 
     rustup
     lsd
