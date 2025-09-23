@@ -1,5 +1,6 @@
 [[ssh-keys]]
 vault = "Private"
 [[ssh-keys]]
-item = "Ansible SSH key"
 vault = "SRE"
+[[ssh-keys]]
+vault = "Employee"

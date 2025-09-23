@@ -7,9 +7,11 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
     brews = [
       "atuin"
+      "esphome"
     ];
 
     casks = [
+      "alfred"
       "1password"
       "affinity-designer"
       "affinity-photo"
@@ -42,7 +44,7 @@
       "little-snitch"
       "lm-studio"
       "medis"
-      "notion"
+      "numi"
       "orbstack"
       "oscar"
       "protonvpn"
@@ -71,8 +73,6 @@
     masApps = {
       "1Password for Safari" = 1569813296;
       "Anybox" = 1593408455;
-      "Bear - Markdown Notes" = 1016366447;
-      "Home Assistant" = 1099568401;
       "Keynote" = 409183694;
       "Numbers" = 409203825;
       "Pages" = 409201541;

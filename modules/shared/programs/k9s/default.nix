@@ -10,16 +10,14 @@
     enable = true;
 
     aliases = {
-      aliases = {
-        dp = "deployments";
-        sec = "v1/secrets";
-        jo = "jobs";
-        cr = "clusterroles";
-        crb = "clusterrolebindings";
-        ro = "roles";
-        rb = "rolebindings";
-        np = "networkpolicies";
-      };
+      dp = "deployments";
+      sec = "v1/secrets";
+      jo = "jobs";
+      cr = "clusterroles";
+      crb = "clusterrolebindings";
+      ro = "roles";
+      rb = "rolebindings";
+      np = "networkpolicies";
     };
 
     plugins = {
@@ -150,19 +148,6 @@
         args = [
           "-c"
           "flux reconcile image update --context $CONTEXT -n $NAMESPACE $NAME | less -K"
-        ];
-      };
-
-      trace = {
-        shortCut = "Shift-P";
-        confirm = false;
-        description = "Flux trace";
-        scopes = ["all"];
-        command = "bash";
-        background = false;
-        args = [
-          "-c"
-          "resource=$(echo $RESOURCE_NAME | sed -E 's/ies$/y/' | sed -E 's/ses$/se/' | sed -E 's/(s|es)$//g'); flux trace --context $CONTEXT --kind $resource --api-version $RESOURCE_GROUP/$RESOURCE_VERSION --namespace $NAMESPACE $NAME | less -K"
         ];
       };
 

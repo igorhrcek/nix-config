@@ -128,10 +128,14 @@
 
       _atuin_fzf_search = {
         body = ''
+          # Ensure tac is available in all environments
+          if not command -v tac >/dev/null 2>&1
+              alias tac='perl -e "print reverse(<>)"'
+          end
           set -f commands_selected (
             atuin history list --format "{command}" |
               tail -30000 |
-              tail -r |
+              tac |
               _fzf_wrapper --print0 \
                 --no-sort \
                 --query=(commandline) \
