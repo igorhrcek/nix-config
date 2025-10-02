@@ -35,6 +35,7 @@
         plugins = [
           "netshoot/netshoot"
           "browse-pvc"
+          "cnpg"
           "df-pv"
           "ctx"
           "exec-as"
