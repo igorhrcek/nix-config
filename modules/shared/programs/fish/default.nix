@@ -17,6 +17,7 @@
       fish_add_path "$HOME/bin"
       fish_add_path "$HOME/.npm-global/bin"
       fish_add_path "$HOME/.krew/bin"
+      fish_add_path "$HOME/go/bin"
 
       set -gx SOPS_AGE_KEY_FILE $HOME/.config/sops/age/keys.txt
       set -gx EDITOR cursor -w
@@ -26,6 +27,8 @@
       set -gx NPM_CONFIG_PREFIX $HOME/.npm-global
       set -gx SSH_AUTH_SOCK $HOME/.1password/agent.sock
       set -gx PATH $PATH $HOME/.krew/bin
+      set -gx GOPATH $HOME/go
+      set -gx PATH $PATH $GOPATH/bin
 
       set -U __done_allow_nongraphical 1
       set -U --append __done_exclude '^htop'

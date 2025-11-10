@@ -41,7 +41,7 @@
     };
 
     talhelper = {
-      url = "github:budimanjojo/talhelper";
+      url = "github:budimanjojo/talhelper/v3.0.30";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

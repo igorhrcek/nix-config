@@ -8,6 +8,7 @@
     brews = [
       "atuin"
       "esphome"
+      "yara"
     ];
 
     casks = [
@@ -50,7 +51,6 @@
       "protonvpn"
       "proxyman"
       "rapidapi"
-      "raycast"
       "rectangle-pro"
       "rocket"
       "runjs"
