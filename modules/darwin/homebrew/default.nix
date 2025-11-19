@@ -46,6 +46,7 @@
       "lm-studio"
       "medis"
       "numi"
+      "ollama"
       "orbstack"
       "oscar"
       "protonvpn"

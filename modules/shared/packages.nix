@@ -108,7 +108,6 @@ in
     tshark
     nixd
 
-    ollama
     claude-code
 
     nextdns
