@@ -68,7 +68,6 @@
       "yubico-yubikey-manager"
       "zed"
       "zoom"
-      "wezterm"
     ];
 
     masApps = {
