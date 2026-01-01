@@ -63,6 +63,7 @@
         talhelper = talhelper.packages.${prev.system}.default;
       })
       (import ./modules/shared/overlays/k9s.nix)
+      (import ./modules/shared/overlays/llm.nix)
     ];
     supportedSystems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin"];
   in

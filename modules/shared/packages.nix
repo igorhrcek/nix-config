@@ -33,6 +33,7 @@ in
     tree-sitter
     watch
     wget
+    android-tools
 
     nil
     alejandra
@@ -72,7 +73,6 @@ in
     go
     hugo
 
-    pre-commit
     uv
     mise
 
