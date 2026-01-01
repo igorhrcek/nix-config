@@ -44,6 +44,10 @@
       url = "github:budimanjojo/talhelper/v3.0.30";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    talosctl = {
+      url = "github:nklmilojevic/talosctl-flake";
+    };
   };
 
   outputs = {
@@ -56,9 +60,11 @@
     krewfile,
     talhelper,
     catppuccin,
+    talosctl,
     ...
   } @ inputs: let
     overlays = [
+      talosctl.overlays.default
       (final: prev: {
         talhelper = talhelper.packages.${prev.system}.default;
       })

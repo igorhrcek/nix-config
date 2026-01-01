@@ -141,7 +141,10 @@ in {
     shell = pkgs.fish;
   };
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
+  };
 
   home-manager = {
     useGlobalPkgs = true;
