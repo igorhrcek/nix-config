@@ -9,6 +9,7 @@
       "atuin"
       "esphome"
       "yara"
+      "ddev"
     ];
 
     casks = [
