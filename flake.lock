@@ -55,6 +55,22 @@
         "type": "github"
       }
     },
+    "ddev": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767374110,
+        "narHash": "sha256-L9as7QoFEV3PHe4iGNfSlJBbSNny8/4IC2JqGX11eF4=",
+        "owner": "ddev",
+        "repo": "ddev",
+        "rev": "d5b35161d434349c0a94e4f5b1dafce6f64b7eae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ddev",
+        "repo": "ddev",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -316,6 +332,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "darwin": "darwin",
+        "ddev": "ddev",
         "flake-utils": "flake-utils",
         "home-manager": "home-manager",
         "homebrew-bundle": "homebrew-bundle",

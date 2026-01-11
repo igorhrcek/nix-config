@@ -30,6 +30,11 @@
       flake = false;
     };
 
+    ddev = {
+      url = "github:ddev/ddev";
+      flake = false;
+    };
+
     homebrew-bundle = {
       url = "github:homebrew/homebrew-bundle";
       flake = false;
@@ -119,6 +124,7 @@
               taps = {
                 "homebrew/homebrew-core" = inputs.homebrew-core;
                 "homebrew/homebrew-cask" = inputs.homebrew-cask;
+                "ddev/ddev" = inputs.ddev;
               };
               mutableTaps = true;
             };
