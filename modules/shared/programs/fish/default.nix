@@ -129,37 +129,39 @@
       };
 
 
-      _atuin_fzf_search = {
-        body = ''
-          # Ensure tac is available in all environments
-          if not command -v tac >/dev/null 2>&1
-              alias tac='perl -e "print reverse(<>)"'
-          end
-          set -f commands_selected (
-            atuin history list --format "{command}" |
-              tail -30000 |
-              tac |
-              _fzf_wrapper --print0 \
-                --no-sort \
-                --query=(commandline) \
-                --height=40% \
-                --border \
-                --preview-window=hidden
-          )
+      # _atuin_fzf_search = {
+      #   body = ''
+      #     # Ensure tac is available in all environments
+      #     if not command -v tac >/dev/null 2>&1
+      #         alias tac='perl -e "print reverse(<>)"'
+      #     end
+      #     set -f commands_selected (
+      #       atuin history list --format "{command}" |
+      #         tail -30000 |
+      #         tac |
+      #         _fzf_wrapper --print0 \
+      #           --scheme=history \
+      #           --no-sort \
+      #           --query=(commandline) \
+      #           --height=40% \
+      #           --exact \
+      #           --border \
+      #           --preview-window=hidden
+      #     )
 
-          if test $status -eq 0
-              commandline --replace -- $commands_selected
-          end
+      #     if test $status -eq 0
+      #         commandline --replace -- $commands_selected
+      #     end
 
-          commandline --function repaint
-        '';
-      };
+      #     commandline --function repaint
+      #   '';
+      # };
 
-      fish_user_key_bindings = {
-        body = ''
-          bind \cR _atuin_fzf_search
-        '';
-      };
+      # fish_user_key_bindings = {
+      #   body = ''
+      #     bind \cR _atuin_fzf_search
+      #   '';
+      # };
     };
   };
 }
