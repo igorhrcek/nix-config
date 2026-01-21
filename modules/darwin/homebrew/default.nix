@@ -36,7 +36,6 @@
       "firefox"
       "forklift"
       "gpg-suite"
-      "gitify"
       "ghostty"
       "iina"
       "intellij-idea"
