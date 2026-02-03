@@ -1,6 +1,4 @@
 [[ssh-keys]]
 vault = "Private"
 [[ssh-keys]]
-vault = "SRE"
-[[ssh-keys]]
 vault = "Employee"

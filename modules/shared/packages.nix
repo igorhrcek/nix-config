@@ -5,6 +5,7 @@ in
     _1password-cli
     bat
     curl
+    cue
     curlie
     docker
     fd
@@ -22,6 +23,7 @@ in
     mtr
     netcat
     nmap
+    ngrok
     openssh
     openssl
     qrencode
@@ -111,7 +113,7 @@ in
     claude-code
 
     nextdns
-    xcodegen
+    # xcodegen
     cloudflared
     go-task
     talosctl

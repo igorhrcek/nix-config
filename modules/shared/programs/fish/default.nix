@@ -25,7 +25,7 @@
       set -gx LC_ALL en_US.UTF-8
       set -gx HOMEBREW_NO_ANALYTICS 1
       set -gx NPM_CONFIG_PREFIX $HOME/.npm-global
-      set -gx SSH_AUTH_SOCK $HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+      set -gx SSH_AUTH_SOCK $HOME/.1password/agent.sock
       set -gx PATH $PATH $HOME/.krew/bin
       set -gx GOPATH $HOME/go
       set -gx PATH $PATH $GOPATH/bin

@@ -23,4 +23,3 @@ alpha-blending = linear-corrected
 shell-integration-features = sudo
 
 keybind = alt+backspace=text:\x1b\x7f
-macos-option-as-alt = true

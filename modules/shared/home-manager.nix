@@ -7,7 +7,7 @@
     ./programs/doggo
     ./programs/fish
     ./programs/git
-    ./programs/helix
+    # ./programs/helix
     ./programs/k9s
     ./programs/krew
     ./programs/lsd

@@ -374,15 +374,6 @@
           auto-format = true;
         }
         {
-          name = "markdown";
-          language-servers = ["marksman" "lsp-ai"];
-          formatter = {
-            command = "prettier";
-            args = ["--stdin-filepath" "file.md"];
-          };
-          auto-format = true;
-        }
-        {
           name = "ruby";
           language-servers = ["solargraph" "lsp-ai"];
           auto-format = true;
