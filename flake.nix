@@ -53,6 +53,11 @@
     talosctl = {
       url = "github:nklmilojevic/talosctl-flake";
     };
+
+    claude-code = {
+      url = "github:sadjow/claude-code-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -66,10 +71,12 @@
     talhelper,
     catppuccin,
     talosctl,
+    claude-code,
     ...
   } @ inputs: let
     overlays = [
       talosctl.overlays.default
+      claude-code.overlays.default
       (final: prev: {
         talhelper = talhelper.packages.${prev.system}.default;
       })
