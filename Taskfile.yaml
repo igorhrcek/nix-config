@@ -108,8 +108,8 @@ tasks:
       [
         generate-secrets,
         generate-ssh-config,
-        # generate-atuin-key,
-        # generate-age-key,
+        generate-atuin-key,
+        generate-age-key,
       ]
 
   generate-secrets:
@@ -135,14 +135,14 @@ tasks:
     cmds:
       - echo "Generating Atuin key..."
       - mkdir -p $(dirname {{.ATUIN_KEY_FILE}})
-      - "{{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/7sov5yg4zpikuz25m2itz6ndhi/password' > {{.ATUIN_KEY_FILE}}"
+      - "{{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/jxinxqnlndg4nsnnqclvvgfrny/encryption' > {{.ATUIN_KEY_FILE}}"
       - echo "Atuin key generated in {{.ATUIN_KEY_FILE}}"
 
   generate-age-key:
     cmds:
       - echo "Generating Age key..."
       - mkdir -p $(dirname {{.AGE_KEY_FILE}})
-      - "{{.OP}} read 'op://legemi4nfmddm5osivm3cmejem/rsguk7qmlg2pufvtc7xyd2h6gi/password' > {{.AGE_KEY_FILE}}"
+      - "{{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/rsguk7qmlg2pufvtc7xyd2h6gi/password' > {{.AGE_KEY_FILE}}"
       - echo "Age key generated in {{.AGE_KEY_FILE}}"
 
   install-fonts:
@@ -156,7 +156,7 @@ tasks:
         mkdir -p "$FONTS_DIR"
 
         # Fetch zip from 1Password and save to temp directory
-        {{.OP}} read "op://legemi4nfmddm5osivm3cmejem/lcqj53otepp3bmxpswcr2wajyu/fonts.zip" --out-file="$TEMP_DIR/fonts.zip"
+        {{.OP}} read "op://dybf7pkyrexvknx2p3mdhmanya/ibobsjtfm32ohxjkwzpuvjvo3e/fonts.zip" --account AOLECYMKWVC53BBIB5CMKJTUKE --out-file="$TEMP_DIR/fonts.zip"
 
         # Unzip fonts
         unzip -q "$TEMP_DIR/fonts.zip" -d "$TEMP_DIR/fonts"
