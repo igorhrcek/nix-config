@@ -125,6 +125,7 @@
           ./hosts/darwin
           nix-homebrew.darwinModules.nix-homebrew
           {
+	    nix.enable = false;
             nix-homebrew = {
               enable = true;
               user = "igor";
