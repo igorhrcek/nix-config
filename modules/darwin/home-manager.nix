@@ -147,11 +147,19 @@ in {
 
   home-manager = {
     useGlobalPkgs = true;
-    users.${user} = {pkgs, ...}: {
+    users.${user} = {pkgs, ...}: let
+      myPackages = pkgs.callPackage ./packages.nix {};
+      myPackageNames = map (p: p.pname or (builtins.parseDrvName p.name).name) myPackages;
+      # Filter out mailerlite packages that overlap with ours (different nixpkgs pins
+      # cause version conflicts, e.g. k9s) and pre-commit (pulls in dotnet -> swift).
+      mlPackages = builtins.filter (p: let
+        name = p.pname or (builtins.parseDrvName p.name).name;
+      in name != "pre-commit" && !builtins.elem name myPackageNames
+      ) inputs.mailerlite.pkgs.aarch64-darwin.sre;
+    in {
       home = {
         enableNixpkgsReleaseCheck = false;
-        packages = pkgs.callPackage ./packages.nix {}
-          ++ inputs.mailerlite.pkgs.aarch64-darwin.sre;
+        packages = myPackages ++ mlPackages;
         stateVersion = "25.05";
       };
 
@@ -162,7 +170,11 @@ in {
         ./programs/1password-agent
       ];
 
-      mailerlite.ssh.username = "igor";
+      # Disable mailerlite-managed SSH and zsh — we manage these ourselves.
+      mailerlite = {
+        ssh.enable = false;
+        zsh.enable = false;
+      };
 
       # Marked broken Oct 20, 2022 check later to remove this
       # https://github.com/nix-community/home-manager/issues/3344
