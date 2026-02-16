@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs, inputs, ...}: let
   user = "igor";
 in {
   imports = [
@@ -150,15 +150,19 @@ in {
     users.${user} = {pkgs, ...}: {
       home = {
         enableNixpkgsReleaseCheck = false;
-        packages = pkgs.callPackage ./packages.nix {};
+        packages = pkgs.callPackage ./packages.nix {}
+          ++ inputs.mailerlite.pkgs.aarch64-darwin.sre;
         stateVersion = "25.05";
       };
 
       imports = [
+        inputs.mailerlite.modules.home-manager.defaults
         ../shared/home-manager.nix
         ./programs/ghostty
         ./programs/1password-agent
       ];
+
+      mailerlite.ssh.username = "igor";
 
       # Marked broken Oct 20, 2022 check later to remove this
       # https://github.com/nix-community/home-manager/issues/3344

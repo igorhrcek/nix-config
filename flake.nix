@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
     flake-utils.url = "github:numtide/flake-utils";
     catppuccin.url = "github:catppuccin/nix";
 
@@ -17,7 +18,7 @@
     };
 
     mailerlite = {
-      url = "path:/Users/igor/nix-config";
+      url = "path:/Users/igor/.config/mailerlite/nix-config";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
@@ -70,6 +71,7 @@
     self,
     nixpkgs,
     flake-utils,
+    mailerlite,
     home-manager,
     darwin,
     nix-homebrew,
@@ -127,11 +129,13 @@
           config.allowUnfree = true;
         };
         modules = [
+          mailerlite.modules.darwin.defaults
           home-manager.darwinModules.home-manager
           ./hosts/darwin
           nix-homebrew.darwinModules.nix-homebrew
           {
 	    nix.enable = false;
+            mailerlite.team = "sre";
             nix-homebrew = {
               enable = true;
               user = "igor";
