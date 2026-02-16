@@ -87,6 +87,12 @@ tasks:
       - sudo darwin-rebuild --dry-run
     desc: Show the current status
 
+  update-mailerlite:
+    cmds:
+      - echo "Updating mailerlite flake input..."
+      - nix flake update mailerlite
+    desc: Update the mailerlite flake input
+
   darwin-refresh:
     cmds:
       - echo "Refreshing Nix-Darwin configuration..."

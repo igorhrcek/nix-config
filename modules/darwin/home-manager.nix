@@ -170,10 +170,12 @@ in {
         ./programs/1password-agent
       ];
 
-      # Disable mailerlite-managed SSH and zsh — we manage these ourselves.
+      # Disable mailerlite-managed modules — we manage these ourselves.
+      # ml-build hardcodes ~/nix-config but our flake is at ~/Projects/private/nix-config.
       mailerlite = {
         ssh.enable = false;
         zsh.enable = false;
+        ml-build.enable = false;
       };
 
       # Marked broken Oct 20, 2022 check later to remove this
