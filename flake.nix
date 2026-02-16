@@ -16,6 +16,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mailerlite = {
+      url = "path:/Users/igor/nix-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "nixpkgs-stable";
+    };
+
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
     };

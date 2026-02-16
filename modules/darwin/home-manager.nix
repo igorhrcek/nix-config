@@ -64,7 +64,6 @@ in {
         "/Applications/Bear.app/"
         "/Applications/BoltAI 2.app/"
         "/Applications/Things3.app/"
-        "/Applications/Linear.app/"
         "/Applications/Slack.app/"
         "/Applications/Cursor.app/"
         "/Applications/Ghostty.app/"
