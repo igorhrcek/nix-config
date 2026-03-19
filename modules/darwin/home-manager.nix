@@ -154,7 +154,7 @@ in {
       # cause version conflicts, e.g. k9s) and pre-commit (pulls in dotnet -> swift).
       mlPackages = builtins.filter (p: let
         name = p.pname or (builtins.parseDrvName p.name).name;
-      in name != "pre-commit" && !builtins.elem name myPackageNames
+      in name != "pre-commit" && name != "claude" && !builtins.elem name myPackageNames
       ) inputs.mailerlite.pkgs.aarch64-darwin.sre;
     in {
       home = {
