@@ -104,12 +104,12 @@ in
     lua54Packages.luarocks-nix
 
     speedtest-go
-    neofetch
     zulu
 
     tshark
     nixd
 
+    codex
     claude-code
 
     nextdns
