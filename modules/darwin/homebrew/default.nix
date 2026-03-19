@@ -23,6 +23,7 @@
       "bambu-studio"
       "bettertouchtool"
       "burp-suite"
+      "cmux"
       "espanso"
       "calibre"
       "cleanshot"
