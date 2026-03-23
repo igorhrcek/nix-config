@@ -62,11 +62,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1772842471,
-        "narHash": "sha256-s9WB49bwkGQZUitWXEnaWiMuVQ2a1/xkMIE4ckAAIpY=",
+        "lastModified": 1773875253,
+        "narHash": "sha256-YHlqpaSTwSqC4q8J7vwP1Idri6dHbsM2ArsmDW4B5tg=",
         "owner": "nklmilojevic",
         "repo": "claude-code-overlay",
-        "rev": "56d5083c3f45f339dab7784b94fe18750450d442",
+        "rev": "cfe14c32ece0417e5898a67f27b841d40136a118",
         "type": "github"
       },
       "original": {
@@ -357,7 +357,7 @@
         ]
       },
       "locked": {
-        "narHash": "sha256-hw295C77aVGvFMw7A0OW54WivyRz9Or0tbjIaQd479Q=",
+        "narHash": "sha256-nm05k6JPBXqUR8qY2nmFLW2eB58z+Zds2h7AnYZVlHg=",
         "path": "/Users/igor/.config/mailerlite/nix-config",
         "type": "path"
       },

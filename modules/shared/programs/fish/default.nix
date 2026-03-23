@@ -20,7 +20,7 @@
       fish_add_path "$HOME/go/bin"
 
       set -gx SOPS_AGE_KEY_FILE $HOME/.config/sops/age/keys.txt
-      set -gx EDITOR cursor -w
+      set -gx EDITOR code -w
       set -gx LANG en_US.UTF-8
       set -gx LC_ALL en_US.UTF-8
       set -gx HOMEBREW_NO_ANALYTICS 1

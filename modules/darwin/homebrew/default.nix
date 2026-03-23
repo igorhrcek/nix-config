@@ -29,7 +29,6 @@
       "cleanshot"
       "cloudflare-warp"
       "cryptomator"
-      "cursor"
       "daisydisk"
       "devutils"
       "discord"
