@@ -49,7 +49,6 @@
       "numi"
       "ollama"
       "orbstack"
-      "oscar"
       "protonvpn"
       "proxyman"
       "rapidapi"
