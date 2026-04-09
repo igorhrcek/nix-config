@@ -42,6 +42,11 @@
       flake = false;
     };
 
+    hetzner_k3s = {
+      url = "github:vitobotta/tap";
+      flake = false;
+    };
+
     homebrew-bundle = {
       url = "github:homebrew/homebrew-bundle";
       flake = false;
@@ -143,6 +148,7 @@
                 "homebrew/homebrew-core" = inputs.homebrew-core;
                 "homebrew/homebrew-cask" = inputs.homebrew-cask;
                 "ddev/ddev" = inputs.ddev;
+                "vitobotta/hetzner_k3s" = inputs.hetzner_k3s;
               };
               mutableTaps = true;
             };

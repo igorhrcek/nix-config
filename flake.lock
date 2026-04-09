@@ -62,11 +62,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1773875253,
-        "narHash": "sha256-YHlqpaSTwSqC4q8J7vwP1Idri6dHbsM2ArsmDW4B5tg=",
+        "lastModified": 1775266395,
+        "narHash": "sha256-EYk5P14xvUMFz1PlQwFbzX562s95M89zrPbj8OWT6sk=",
         "owner": "nklmilojevic",
         "repo": "claude-code-overlay",
-        "rev": "cfe14c32ece0417e5898a67f27b841d40136a118",
+        "rev": "98457ff9dd9bd1737b57d26325784af897b39425",
         "type": "github"
       },
       "original": {
@@ -255,6 +255,22 @@
         "type": "github"
       }
     },
+    "hetzner_k3s": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1775319186,
+        "narHash": "sha256-QjS9wS30NWQDyrKQxeVf7M8rdWBoJ9mNo5z6KRxpqac=",
+        "owner": "vitobotta",
+        "repo": "hetzner-k3s",
+        "rev": "8dfefb89333e630355de897d4d85e2be03c67dd7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vitobotta",
+        "repo": "hetzner-k3s",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -357,7 +373,7 @@
         ]
       },
       "locked": {
-        "narHash": "sha256-nm05k6JPBXqUR8qY2nmFLW2eB58z+Zds2h7AnYZVlHg=",
+        "narHash": "sha256-n1zDNmldXi+7aLlyv8JHsubkHHgPTNchtZKhSwuI9hY=",
         "path": "/Users/igor/.config/mailerlite/nix-config",
         "type": "path"
       },
@@ -586,6 +602,7 @@
         "darwin": "darwin",
         "ddev": "ddev",
         "flake-utils": "flake-utils_2",
+        "hetzner_k3s": "hetzner_k3s",
         "home-manager": "home-manager",
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
