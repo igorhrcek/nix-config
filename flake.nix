@@ -43,7 +43,7 @@
     };
 
     hetzner_k3s = {
-      url = "github:vitobotta/tap";
+      url = "github:vitobotta/homebrew-tap";
       flake = false;
     };
 
@@ -58,7 +58,7 @@
     };
 
     talhelper = {
-      url = "github:budimanjojo/talhelper/v3.0.30";
+      url = "github:budimanjojo/talhelper";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -148,7 +148,7 @@
                 "homebrew/homebrew-core" = inputs.homebrew-core;
                 "homebrew/homebrew-cask" = inputs.homebrew-cask;
                 "ddev/ddev" = inputs.ddev;
-                "vitobotta/hetzner_k3s" = inputs.hetzner_k3s;
+                "vitobotta/tap" = inputs.hetzner_k3s;
               };
               mutableTaps = true;
             };

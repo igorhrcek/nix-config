@@ -10,6 +10,7 @@
       "esphome"
       "yara"
       "ddev"
+      "vitobotta/tap/hetzner_k3s"
     ];
 
     casks = [
