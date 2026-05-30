@@ -38,8 +38,6 @@
       "forklift"
       "gpg-suite"
       "ghostty"
-      "iina"
-      "intellij-idea"
       "insta360-link-controller"
       "jordanbaird-ice"
       "keycastr"

@@ -83,14 +83,13 @@ in
         pkgs.poetryPlugins.poetry-plugin-shell
       ]))
 
-    (python313.withPackages (ps: [
+    (python314.withPackages (ps: [
       ps.llm
       ps.pyyaml
       ps.llm-cmd
       ps.ruff
       ps.pillow
       customPackages.llm-openrouter
-      ps.pipx
     ]))
 
     bun

@@ -91,7 +91,7 @@
       talosctl.overlays.default
       claude-code.overlays.default
       (final: prev: {
-        talhelper = talhelper.packages.${prev.system}.default;
+        talhelper = talhelper.packages.${prev.stdenv.hostPlatform.system}.default;
       })
       (import ./modules/shared/overlays/k9s.nix)
       (import ./modules/shared/overlays/llm.nix)
