@@ -74,7 +74,7 @@ in {
         "/Applications/Viber.app/"
         "/Applications/Spotify.app/"
         "/Applications/RapidAPI.app/"
-        "/Applications/TablePlus.app/"
+        "/Applications/TablePro.app/"
         "/Applications/DevUtils.app/"
         "/Applications/Fantastical.app/"
         "/System/Applications/Messages.app/"

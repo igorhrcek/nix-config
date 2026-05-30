@@ -61,7 +61,6 @@
       "stats"
       "swiftbar"
       "the-unarchiver"
-      "tableplus"
       "viber"
       "visual-studio-code"
       "vlc"
