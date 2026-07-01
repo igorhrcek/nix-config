@@ -90,6 +90,13 @@
     overlays = [
       talosctl.overlays.default
       claude-code.overlays.default
+      # mailerlite modules (e.g. helm) expect pkgs.stable; mirror their overlay
+      (final: _prev: {
+        stable = import inputs.nixpkgs-stable {
+          system = final.stdenv.hostPlatform.system;
+          config.allowUnfree = true;
+        };
+      })
       (final: prev: {
         talhelper = talhelper.packages.${prev.stdenv.hostPlatform.system}.default;
       })

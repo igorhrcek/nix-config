@@ -15,4 +15,11 @@
     ./programs/starship
     ./programs/zoxide
   ];
+
+  # Silence catppuccin auto-enroll deprecation warning. autoEnable=false keeps
+  # per-program enables manual (current behavior); enable=true is the new global toggle.
+  catppuccin = {
+    enable = true;
+    autoEnable = false;
+  };
 }
