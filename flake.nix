@@ -37,6 +37,11 @@
       flake = false;
     };
 
+    sofka = {
+      url = "github:nklmilojevic/sofka";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ddev = {
       url = "github:ddev/ddev";
       flake = false;
@@ -85,11 +90,13 @@
     catppuccin,
     talosctl,
     claude-code,
+    sofka,
     ...
   } @ inputs: let
     overlays = [
       talosctl.overlays.default
       claude-code.overlays.default
+      sofka.overlays.default
       # mailerlite modules (e.g. helm) expect pkgs.stable; mirror their overlay
       (final: _prev: {
         stable = import inputs.nixpkgs-stable {

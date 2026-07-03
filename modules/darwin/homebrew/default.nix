@@ -37,7 +37,6 @@
       "firefox"
       "forklift"
       "gpg-suite"
-      "ghostty"
       "insta360-link-controller"
       "jordanbaird-ice"
       "keycastr"
@@ -71,6 +70,7 @@
     masApps = {
       "1Password for Safari" = 1569813296;
       "Anybox" = 1593408455;
+      "Bear" = 1091189122;
       "Keynote" = 409183694;
       "Numbers" = 409203825;
       "Pages" = 409201541;

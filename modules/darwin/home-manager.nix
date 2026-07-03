@@ -176,6 +176,9 @@ in {
         ssh.enable = false;
         zsh.enable = false;
         ml-build.enable = false;
+        # Native Claude Code installer owns ~/.local/bin/claude and self-updates;
+        # don't let this symlink fight it every rebuild (clobber error).
+        claude.enable = false;
       };
 
       # Marked broken Oct 20, 2022 check later to remove this
