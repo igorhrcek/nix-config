@@ -47,7 +47,6 @@
       "ollama"
       "orbstack"
       "protonvpn"
-      "proxyman"
       "rapidapi"
       "rectangle-pro"
       "rocket"
