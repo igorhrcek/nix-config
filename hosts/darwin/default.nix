@@ -15,6 +15,12 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 5;
 
+  # ponytail: nix-darwin manual build broken by newer nixpkgs (--toc-depth removed);
+  # uninstaller embeds a default system that builds the manual too.
+  # drop both once nix-darwin master catches up
+  documentation.enable = false;
+  system.tools.darwin-uninstaller.enable = false;
+
   home-manager = {
     backupFileExtension = "backup";
     users.igor = {
