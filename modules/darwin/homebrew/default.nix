@@ -10,6 +10,8 @@
       "esphome"
       "yara"
       "ddev"
+      "mkcert"
+      "nss"
       "vitobotta/tap/hetzner_k3s"
     ];
 
@@ -33,7 +35,7 @@
       "daisydisk"
       "devutils"
       "discord"
-      "fantastical"
+      "busycal"
       "firefox"
       "forklift"
       "gpg-suite"

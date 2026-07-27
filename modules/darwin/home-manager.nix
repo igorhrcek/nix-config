@@ -76,7 +76,7 @@ in {
         "/Applications/RapidAPI.app/"
         "/Applications/TablePro.app/"
         "/Applications/DevUtils.app/"
-        "/Applications/Fantastical.app/"
+        "/Applications/BusyCal.app/"
         "/System/Applications/Messages.app/"
         "/Applications/1Password.app/"
       ];
