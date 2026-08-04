@@ -17,7 +17,6 @@
 
     casks = [
       "alfred"
-      "crane"
       "1password"
       "affinity-designer"
       "affinity-photo"
@@ -28,6 +27,7 @@
       "bettertouchtool"
       "burp-suite"
       "cmux"
+      "ghostty"
       "espanso"
       "calibre"
       "cleanshot"
@@ -47,7 +47,7 @@
       "lm-studio"
       "medis"
       "numi"
-      "ollama"
+      "ollama-app"
       "orbstack"
       "protonvpn"
       "rapidapi"

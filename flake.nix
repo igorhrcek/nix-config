@@ -23,8 +23,16 @@
       inputs.nixpkgs-stable.follows = "nixpkgs-stable";
     };
 
+    # nix-homebrew pins brew to an old release tag; track master so brew
+    # never lags behind the auto-updated homebrew-core formulae DSL
+    brew-src = {
+      url = "github:Homebrew/brew";
+      flake = false;
+    };
+
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
+      inputs.brew-src.follows = "brew-src";
     };
 
     homebrew-core = {

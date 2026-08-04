@@ -50,7 +50,7 @@ in
     awscli2
     (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
     sofka
-    k9s
+    # k9s
     kubectl
     kubernetes-helm
     skaffold
@@ -79,10 +79,10 @@ in
     uv
     mise
 
-    (poetry.withPlugins
-      (ps: [
-        pkgs.poetryPlugins.poetry-plugin-shell
-      ]))
+    # (poetry.withPlugins
+    #   (ps: [
+    #     pkgs.poetryPlugins.poetry-plugin-shell
+    #   ]))
 
     (python314.withPackages (ps: [
       ps.llm
