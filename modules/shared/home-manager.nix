@@ -7,7 +7,7 @@
     ./programs/doggo
     ./programs/fish
     ./programs/git
-    ./programs/k9s
+    # ./programs/k9s
     ./programs/krew
     ./programs/lsd
     ./programs/lazygit

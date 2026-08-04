@@ -62,7 +62,6 @@ in {
       persistent-apps = [
         "/System/Applications/Mail.app/"
         "/Applications/Bear.app/"
-        "/Applications/BoltAI 2.app/"
         "/Applications/Things3.app/"
         "/Applications/Slack.app/"
         "/Applications/Visual Studio Code.app/"
