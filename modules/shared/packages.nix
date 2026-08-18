@@ -40,13 +40,14 @@ in
     nil
     alejandra
 
-    php83
-    php83Packages.composer
+    php84
+    php84Packages.composer
 
     postgresql_16
     redis
 
     fluxcd
+    fluxcd-operator
     awscli2
     (google-cloud-sdk.withExtraComponents [google-cloud-sdk.components.gke-gcloud-auth-plugin])
     sofka

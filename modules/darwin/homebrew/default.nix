@@ -13,6 +13,7 @@
       "mkcert"
       "nss"
       "vitobotta/tap/hetzner_k3s"
+      "can1357/tap/omp"
     ];
 
     casks = [

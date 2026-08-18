@@ -60,6 +60,11 @@
       flake = false;
     };
 
+    omp = {
+      url = "github:can1357/homebrew-tap";
+      flake = false;
+    };
+
     homebrew-bundle = {
       url = "github:homebrew/homebrew-bundle";
       flake = false;
@@ -171,6 +176,7 @@
                 "homebrew/homebrew-cask" = inputs.homebrew-cask;
                 "ddev/ddev" = inputs.ddev;
                 "vitobotta/tap" = inputs.hetzner_k3s;
+                "can1357/tap" = inputs.omp;
               };
               mutableTaps = true;
             };
