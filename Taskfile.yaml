@@ -96,6 +96,8 @@ tasks:
   darwin-refresh:
     cmds:
       - echo "Refreshing Nix-Darwin configuration..."
+      - brew trust --formula ddev/ddev/ddev
+      - brew trust vitobotta/hetzner_k3s
       - sudo darwin-rebuild switch --flake . --show-trace
     desc: Refresh Nix-Darwin configuration
 
