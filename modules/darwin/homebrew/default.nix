@@ -42,10 +42,11 @@
       "forklift"
       "gpg-suite"
       "insta360-link-controller"
-      "jordanbaird-ice"
+      "thaw"
       "keycastr"
       "little-snitch"
       "lm-studio"
+      "mole-app"
       "medis"
       "numi"
       "ollama-app"
@@ -74,9 +75,9 @@
       "1Password for Safari" = 1569813296;
       "Anybox" = 1593408455;
       "Bear" = 1091189122;
-      "Keynote" = 409183694;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
+      "Keynote" = 361285480;
+      "Numbers" = 361304891;
+      "Pages" = 361309726;
       "Pixelmator Pro" = 1289583905;
       "Telegram" = 747648890;
       "Things" = 904280696;
