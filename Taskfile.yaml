@@ -11,8 +11,8 @@ vars:
   SECRETS_FILE: "{{.HOME}}/.config/fish/secrets.fish"
   OP: op
   SSH_CONFIG_FILE: "{{.HOME}}/.ssh/config"
-  ATUIN_KEY_FILE: "{{.HOME}}/.local/share/atuin/key"
   AGE_KEY_FILE: "{{.HOME}}/.config/sops/age/keys.txt"
+  AGE_KEY_REF: "op://dybf7pkyrexvknx2p3mdhmanya/rsguk7qmlg2pufvtc7xyd2h6gi/password"
 
 tasks:
   default:
@@ -35,23 +35,23 @@ tasks:
   switch:
     cmds:
       - |
+        set -e
         if [ "{{.OS}}" = "Darwin" ]; then
           echo "Switching to the new Nix-Darwin configuration..."
           sudo ./result/sw/bin/darwin-rebuild switch --flake .#{{.HOSTNAME}}
-          task post-switch
-          echo "Secrets rewritten."
+          /run/current-system/sw/bin/ml-record-applied
         else
           echo "Activating the new Home Manager configuration for Linux..."
           ./result/activate
         fi
-    desc: Apply the new configuration and generate secrets
+    desc: Apply the new configuration and record the company release
 
   post-switch:
     cmds:
       - echo "Running post-switch tasks..."
       - task check-op-signin
       - task all-secrets
-    desc: Run post-switch tasks (generate secrets)
+    desc: Manually generate secrets during initial setup
 
   check-op-signin:
     cmds:
@@ -96,14 +96,31 @@ tasks:
   darwin-refresh:
     cmds:
       - echo "Refreshing Nix-Darwin configuration..."
-      - brew trust --formula ddev/ddev/ddev
-      - brew trust vitobotta/hetzner_k3s
+      - task: homebrew-trust
       - sudo darwin-rebuild switch --flake . --show-trace
+      - /run/current-system/sw/bin/ml-record-applied
     desc: Refresh Nix-Darwin configuration
 
+  homebrew-trust:
+    internal: true
+    cmds:
+      - brew trust --formula ddev/ddev/ddev
+      - brew trust vitobotta/hetzner_k3s
+
   universal-build:
-    deps: [build, switch]
+    cmds:
+      - task: build
+      - task: switch
     desc: Build and apply the new configuration based on the OS
+
+  company-build:
+    platforms: [darwin]
+    cmds:
+      - task: update-mailerlite
+      - task: build
+      - task: homebrew-trust
+      - task: switch
+    desc: Update company input, build the combined configuration, and apply it
 
   setup-nix:
     cmds:
@@ -116,7 +133,6 @@ tasks:
       [
         generate-secrets,
         generate-ssh-config,
-        generate-atuin-key,
         generate-age-key,
       ]
 
@@ -141,16 +157,20 @@ tasks:
 
   generate-atuin-key:
     cmds:
-      - echo "Generating Atuin key..."
-      - mkdir -p $(dirname {{.ATUIN_KEY_FILE}})
-      - "{{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/jxinxqnlndg4nsnnqclvvgfrny/encryption' > {{.ATUIN_KEY_FILE}}"
-      - echo "Atuin key generated in {{.ATUIN_KEY_FILE}}"
+      - atuin login
+    desc: Set up Atuin interactively (accepts a recovery phrase; never writes it directly to the key file)
 
   generate-age-key:
     cmds:
       - echo "Generating Age key..."
-      - mkdir -p $(dirname {{.AGE_KEY_FILE}})
-      - "{{.OP}} read 'op://dybf7pkyrexvknx2p3mdhmanya/rsguk7qmlg2pufvtc7xyd2h6gi/password' > {{.AGE_KEY_FILE}}"
+      - |
+        set -eu
+        mkdir -p "$(dirname "{{.AGE_KEY_FILE}}")"
+        AGE_KEY_TEMP=$(mktemp "{{.AGE_KEY_FILE}}.XXXXXX")
+        trap 'rm -f "$AGE_KEY_TEMP"' EXIT
+        {{.OP}} read '{{.AGE_KEY_REF}}' --account AOLECYMKWVC53BBIB5CMKJTUKE > "$AGE_KEY_TEMP"
+        test -s "$AGE_KEY_TEMP"
+        mv "$AGE_KEY_TEMP" "{{.AGE_KEY_FILE}}"
       - echo "Age key generated in {{.AGE_KEY_FILE}}"
 
   install-fonts:

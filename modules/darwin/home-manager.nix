@@ -1,4 +1,4 @@
-{pkgs, inputs, ...}: let
+{config, pkgs, inputs, ...}: let
   user = "igor";
 in {
   imports = [
@@ -16,6 +16,15 @@ in {
   };
 
   environment = {
+    # Called only after a successful switch, using the activated release.
+    systemPackages = [
+      (pkgs.writeShellScriptBin "ml-record-applied" ''
+        set -euo pipefail
+        ML_SHARED_FLAKE_DIR=${inputs.mailerlite.outPath} \
+          ${config.home-manager.users.${user}.mailerlite.state.package}/bin/ml-state stamp-applied
+        ${config.home-manager.users.${user}.mailerlite.state.package}/bin/ml-state refresh-available
+      '')
+    ];
     etc."pam.d/sudo_local".text = ''
       # Managed by Nix Darwin
       auth       optional       ${pkgs.pam-reattach}/lib/pam/pam_reattach.so ignore_ssh
@@ -158,7 +167,18 @@ in {
     in {
       home = {
         enableNixpkgsReleaseCheck = false;
-        packages = myPackages ++ mlPackages;
+        packages = myPackages ++ mlPackages ++ [
+          (pkgs.writeShellScriptBin "ml-build" ''
+            set -euo pipefail
+            cd "$HOME/Projects/private/nix-config"
+            exec ${pkgs.go-task}/bin/task company-build "$@"
+          '')
+          (pkgs.writeShellScriptBin "ml-update" ''
+            set -euo pipefail
+            cd "$HOME/Projects/private/nix-config"
+            exec ${pkgs.go-task}/bin/task update "$@"
+          '')
+        ];
         stateVersion = "25.05";
       };
 
@@ -172,6 +192,7 @@ in {
       # Disable mailerlite-managed modules — we manage these ourselves.
       # ml-build hardcodes ~/nix-config but our flake is at ~/Projects/private/nix-config.
       mailerlite = {
+        team = "sre";
         ssh.enable = false;
         zsh.enable = false;
         ml-build.enable = false;
