@@ -168,6 +168,9 @@
           {
 	    nix.enable = false;
             mailerlite.team = "sre";
+            # The updater defaults to ~/nix-config (the stale install template,
+            # host IgorsMacBookPro, no fish) and switches the system to it.
+            mailerlite.autoUpdate.userConfigPath = "/Users/igor/Projects/private/nix-config";
             nix-homebrew = {
               enable = true;
               user = "igor";
@@ -176,7 +179,7 @@
                 "homebrew/homebrew-cask" = inputs.homebrew-cask;
                 "ddev/ddev" = inputs.ddev;
                 "vitobotta/tap" = inputs.hetzner_k3s;
-                "can1357/tap" = inputs.omp;
+                "can1357/homebrew-tap" = inputs.omp;
               };
               mutableTaps = true;
             };

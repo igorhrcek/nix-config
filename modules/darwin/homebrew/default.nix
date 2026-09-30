@@ -9,7 +9,9 @@
       "atuin"
       "esphome"
       "yara"
-      "ddev"
+      # Fully-qualified so nix-darwin emits `trusted: true`; cleanup rewrites
+      # the trust store from the Brewfile, wiping any manual `brew trust`.
+      "ddev/ddev/ddev"
       "mkcert"
       "nss"
       "vitobotta/tap/hetzner_k3s"

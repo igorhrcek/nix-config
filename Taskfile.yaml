@@ -96,16 +96,9 @@ tasks:
   darwin-refresh:
     cmds:
       - echo "Refreshing Nix-Darwin configuration..."
-      - task: homebrew-trust
       - sudo darwin-rebuild switch --flake . --show-trace
       - /run/current-system/sw/bin/ml-record-applied
     desc: Refresh Nix-Darwin configuration
-
-  homebrew-trust:
-    internal: true
-    cmds:
-      - brew trust --formula ddev/ddev/ddev
-      - brew trust vitobotta/hetzner_k3s
 
   universal-build:
     cmds:
@@ -118,7 +111,6 @@ tasks:
     cmds:
       - task: update-mailerlite
       - task: build
-      - task: homebrew-trust
       - task: switch
     desc: Update company input, build the combined configuration, and apply it
 
