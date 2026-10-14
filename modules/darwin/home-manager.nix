@@ -199,6 +199,8 @@ in {
         # Native Claude Code installer owns ~/.local/bin/claude and self-updates;
         # don't let this symlink fight it every rebuild (clobber error).
         claude.enable = false;
+        # We install sofka from its own flake overlay; avoid duplicate bin/sofka.
+        sofka.enable = false;
       };
 
       # Marked broken Oct 20, 2022 check later to remove this
