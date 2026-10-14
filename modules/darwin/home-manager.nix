@@ -185,7 +185,6 @@ in {
       imports = [
         inputs.mailerlite.modules.home-manager.defaults
         ../shared/home-manager.nix
-        ./programs/ghostty
         ./programs/1password-agent
       ];
 
