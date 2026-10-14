@@ -51,7 +51,6 @@
       "orbstack"
       "protonvpn"
       "rapidapi"
-      "rocket"
       "runjs"
       "slack"
       "syntax-highlight"

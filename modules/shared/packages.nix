@@ -80,11 +80,6 @@ in
     uv
     mise
 
-    # (poetry.withPlugins
-    #   (ps: [
-    #     pkgs.poetryPlugins.poetry-plugin-shell
-    #   ]))
-
     (python314.withPackages (ps: [
       ps.llm
       ps.pyyaml
@@ -114,7 +109,6 @@ in
     claude-code
 
     nextdns
-    # xcodegen
     cloudflared
     go-task
     talosctl
